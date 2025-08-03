@@ -4,15 +4,17 @@ const PetList = (props) => {
         <dev>
             <h1>Pet List</h1>
             <div>
-                {!props.pets.length?(
+                {!props.pets.length ? (
                     <h2>There is no pets</h2>
-                ):(
+                ) : (
 
                     <ul>
-                    {props.pets.map((pet) => (
-                        <li key={pet._id}>{pet.name}</li>
-                    ))}
-                </ul>
+                        {props.pets.map((pet) => (
+                            <li key={pet._id} style={{ cursor: 'pointer', color: "#646CFF" }} onClick={() => props.handleSelectedPet(pet)}>
+                                {pet.name}
+                            </li>
+                        ))}
+                    </ul>
                 )}
             </div>
         </dev>
