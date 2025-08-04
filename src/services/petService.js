@@ -10,7 +10,21 @@ const index = async () => {
     console.log(err);
   }
 };
+const create=async(formData)=>{
+  try{
+    const res = await fetch(BASE_URL,{
+      method:POST,
+      headers:{
+        'Content-type':'application.json'
+      },
+      body:JSON.stringify(formData)
+    })
+  }catch(err){
+    console.log(err)
+  }
+
+}
 console.log(await index());
 export {
-  index,
+  index,create
 };

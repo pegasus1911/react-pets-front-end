@@ -17,6 +17,9 @@ const PetList = (props) => {
                     </ul>
                 )}
             </div>
+            <button onClick={props.handleFormOpen}>
+                {props.isFormOpen? 'close Form': 'New Pet'}
+            </button>
         </dev>
     )
 }
